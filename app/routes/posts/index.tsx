@@ -1,7 +1,6 @@
 import { LoaderFunction, useLoaderData } from "remix";
 import { getAllPosts } from "~/service/posts.service";
 
-
 export const loader: LoaderFunction = async () => {
   return await getAllPosts();
 }
