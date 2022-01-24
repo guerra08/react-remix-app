@@ -1,4 +1,3 @@
-import { Prisma } from "@prisma/client";
 import { db } from "~/persistence/db";
 
 export const createPost = async (formData: FormData) => {
