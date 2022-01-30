@@ -1,10 +1,9 @@
 import { ActionFunction, Form, Link, LoaderFunction, redirect, useLoaderData } from "remix";
-import type { Post } from "prisma/prisma-client"
 import { deletePost, getAllPosts } from "~/service/posts.service";
 
-type LoaderData = Post[];
+type LoaderData = Awaited<ReturnType<typeof loader>>
 
-export const loader: LoaderFunction = async () => {
+export const loader = async () => {
   return await getAllPosts();
 }
 
